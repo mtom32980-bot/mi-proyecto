@@ -46,3 +46,5 @@ if __name__ == "__main__":
     conexion_c2 = conector_comando_control()
 
     ejecutar_payload(conexion_c2)
+
+    #final del codigo
